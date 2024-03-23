@@ -1,0 +1,29 @@
+{
+    "name": "juzaweb/ads-manager",
+    "type": "juzaweb-plugin",
+    "license": "MIT",
+    "description": "Add html ads to your website",
+    "extra": {
+        "juzaweb": {
+            "name": "Ads Management",
+            "domain": "jwad",
+            "cms_min": "3.0",
+            "networkable": true,
+            "providers": [
+                "Juzaweb\\AdsManager\\Providers\\AdsManagerServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Juzaweb\\AdsManager\\": "src/"
+        }
+    },
+    "require": {
+        "sokil/php-vast": "^2.1"
+    },
+    "require-dev": {
+        "juzaweb/modules": "^1.0",
+        "juzaweb/dev-tool": "^1.0"
+    }
+}
