@@ -2396,19 +2396,19 @@
         },
         {
             "name": "juzaweb/demo-site",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/juzaweb/demo-site.git",
-                "reference": "b8a3a3111299609ab3dc0fae2e3b1a53b0d4c003"
+                "reference": "eb0e8624a0a60227ed233b68ee0e461410eb3e05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/juzaweb/demo-site/zipball/b8a3a3111299609ab3dc0fae2e3b1a53b0d4c003",
-                "reference": "b8a3a3111299609ab3dc0fae2e3b1a53b0d4c003",
+                "url": "https://api.github.com/repos/juzaweb/demo-site/zipball/eb0e8624a0a60227ed233b68ee0e461410eb3e05",
+                "reference": "eb0e8624a0a60227ed233b68ee0e461410eb3e05",
                 "shasum": ""
             },
-            "type": "library",
+            "type": "juzaweb-plugin",
             "extra": {
                 "juzaweb": {
                     "providers": [
@@ -2416,8 +2416,8 @@
                     ],
                     "name": "Demo site",
                     "domain": "demo",
-                    "cms_min": "^3.0",
-                    "version": "1.0.1",
+                    "cms_min": "3.3",
+                    "version": "1.0.2",
                     "setting_url": "setting/system/demo-site"
                 }
             },
@@ -2427,11 +2427,15 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Create a demo website",
             "support": {
                 "issues": "https://github.com/juzaweb/demo-site/issues",
-                "source": "https://github.com/juzaweb/demo-site/tree/1.0.1"
+                "source": "https://github.com/juzaweb/demo-site/tree/1.0.2"
             },
-            "time": "2022-05-03T04:23:46+00:00"
+            "time": "2024-03-23T07:38:30+00:00"
         },
         {
             "name": "juzaweb/dev-tool",
