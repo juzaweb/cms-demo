@@ -1,0 +1,86 @@
+{
+    "name": "juzaweb/cms",
+    "type": "project",
+    "homepage": "https://juzaweb.com",
+    "description": "Juzaweb CMS is a Content Management System (CMS) developed based on Laravel Framework and web platform whose sole purpose is to make your development workflow simple again. Project develop by Juzaweb",
+    "keywords": [
+        "framework",
+        "laravel",
+        "laravel cms",
+        "mymo cms",
+        "laravel cms like wordpress",
+        "cms like wordpress",
+        "juzaweb",
+        "juzacms"
+    ],
+    "license": "GPL-2.0",
+    "require": {
+        "php": "^8.0|^8.1",
+        "composer/installers": "^2.2",
+        "guzzlehttp/guzzle": "^7.2",
+        "juzaweb/dev-tool": "^1.0",
+        "juzaweb/modules": "^1.0",
+        "laravel/framework": "^9.2",
+        "laravel/tinker": "^2.7",
+        "oomphinc/composer-installers-extender": "^2.0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.6",
+        "barryvdh/laravel-ide-helper": "^2.1",
+        "fakerphp/faker": "^1.9.1",
+        "laravel/sail": "^1.0.1",
+        "laravel/telescope": "^4.7",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^6.1",
+        "phpunit/phpunit": "^9.5.10",
+        "roave/security-advisories": "dev-latest",
+        "spatie/laravel-ignition": "^1.0"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        },
+        "installer-types": ["juzaweb-plugin", "juzaweb-theme"],
+        "installer-paths": {
+            "plugins/{$name}/": ["type:juzaweb-plugin"],
+            "themes/{$name}/": ["type:juzaweb-theme"]
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "composer/installers": true,
+            "oomphinc/composer-installers-extender": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./plugins/*"
+        },
+        {
+            "type": "path",
+            "url": "./themes/*"
+        }
+    ]
+}
